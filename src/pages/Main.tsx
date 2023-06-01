@@ -1,3 +1,4 @@
+import { useQuery } from "@tanstack/react-query";
 import Container from "../components/common/Container";
 import Poster from "../components/main/Poster/Poster";
 
