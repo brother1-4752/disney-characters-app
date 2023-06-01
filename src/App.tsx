@@ -1,5 +1,13 @@
+import { Outlet } from "react-router-dom";
+
 function App() {
-  return <div>DISNEY APP</div>;
+  return (
+    <div>
+      <h1>DISNEY APP</h1>
+
+      <Outlet />
+    </div>
+  );
 }
 
 export default App;
