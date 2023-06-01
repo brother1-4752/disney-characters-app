@@ -12,6 +12,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderTitle = styled.h1`
   line-height: 60px;
+  //TODO: 폰트 type에 따라 size, font-family(Bold|Regular) 구분해서 할당
   font-size: 3rem;
   font-family: DisneyBold, sans-serif, Arial;
   opacity: 0.85;
@@ -25,7 +26,8 @@ const NavOuter = styled.nav`
   justify-content: center;
   align-items: center;
 
-  background-color: #355c7d;
+  background-color: #304890;
+  border-bottom: 1.5px solid white;
 `;
 
 const NavInner = styled.div`
