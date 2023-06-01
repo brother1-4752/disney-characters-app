@@ -1,11 +1,35 @@
 import styled from "styled-components";
-import mainPoster from "../../utils/images/mainPoster.png";
-import { Link } from "react-router-dom";
 
 const PosterWrapper = styled.div`
   width: 100%;
 
   position: relative;
+
+  .poster__descriptions {
+    width: 500px;
+    height: 250px;
+
+    position: absolute;
+
+    top: 100px;
+    left: 100px;
+
+    .poster__descriptions__title {
+      line-height: 60px;
+      margin-bottom: 20px;
+
+      font-size: 2.5rem;
+      font-family: DisneyBold, sans-serif, Arial;
+
+      color: white;
+    }
+
+    .poster__descriptions__description {
+      line-height: 30px;
+      font-size: 1.2em;
+      font-family: DisneyRegular, sans-serif, Arial;
+    }
+  }
 
   .poster__sellecter {
     width: 450px;
@@ -24,6 +48,7 @@ const PosterWrapper = styled.div`
       cursor: pointer;
       > .poster__sellecter--label {
         background-color: #304890;
+        color: white;
       }
     }
 
@@ -39,22 +64,11 @@ const PosterWrapper = styled.div`
 
       background-color: rgba(255, 255, 255, 0);
       border-radius: 20px;
-      color: white;
+      color: rgba(255, 255, 255, 0);
       font-family: DisneyRegular, sans-serif, Arial;
       font-size: 18px;
     }
   }
 `;
 
-export default function Poster() {
-  return (
-    <PosterWrapper>
-      <div className="poster__sellecter">
-        <div className="poster__sellecter--label">
-          <Link to="/characters/:mickey%20mouse">Mickey Mouse</Link>
-        </div>
-      </div>
-      <img src={mainPoster} />
-    </PosterWrapper>
-  );
-}
+export default PosterWrapper;
