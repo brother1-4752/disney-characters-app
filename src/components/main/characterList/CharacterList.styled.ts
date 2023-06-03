@@ -46,17 +46,16 @@ const CharacterListContainer = styled.div`
     }
 
     .characterlist__item--label {
-      width: 120px;
-      height: 40px;
+      padding: 15px 20px;
       line-height: 20px;
 
       position: absolute;
-      bottom: -20px;
+      bottom: -15px;
 
       font-size: 18px;
       font-family: DisneyBold;
       text-align: center;
-      padding-top: 10px;
+      /* padding-top: 10px; */
 
       background-color: #ffbc11;
       color: white;
