@@ -1,4 +1,5 @@
 import { Container, Mickey, Poster } from "../components";
+import { CharacterList } from "../components/main/characterList";
 
 export default function Main() {
   return (
@@ -6,11 +7,7 @@ export default function Main() {
       <Poster />
       <Container>
         <Mickey />
-        <div>
-          <h1>MAIN TITLE</h1>
-          <p>CONTENTS</p>
-          <span>hahaha</span>
-        </div>
+        <CharacterList />
       </Container>
     </>
   );
