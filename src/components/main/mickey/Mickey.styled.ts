@@ -16,7 +16,7 @@ const MickeyContainer = styled.div`
       width: 450px;
       height: 450px;
 
-      border: 3px solid #304890;
+      border: 2.5px solid #304890;
       border-radius: 50%;
     }
 

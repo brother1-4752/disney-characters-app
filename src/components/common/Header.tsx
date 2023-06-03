@@ -54,7 +54,7 @@ const NavMenu = styled(Link)`
 export default function Header() {
   return (
     <HeaderWrapper>
-      <HeaderTitle>DISNEY</HeaderTitle>
+      <HeaderTitle>DISNEY WORLD</HeaderTitle>
 
       <NavOuter>
         <NavInner>

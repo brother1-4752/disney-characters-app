@@ -41,7 +41,7 @@ const CharacterListContainer = styled.div`
       width: 250px;
       height: 250px;
 
-      border: 3px solid #304890;
+      border: 2.5px solid #304890;
       border-radius: 50%;
     }
 
