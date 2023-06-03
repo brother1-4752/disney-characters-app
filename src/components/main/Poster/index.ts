@@ -1,1 +1,1 @@
-import { default as Poster } from "./Poster";
+export { default as Poster } from "./Poster";

@@ -1,13 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
-import Container from "../components/common/Container";
-import Poster from "../components/main/Poster/Poster";
+import { Container, Mickey, Poster } from "../components";
 
 export default function Main() {
   return (
     <>
       <Poster />
       <Container>
-        <div>MAIN</div>
+        <Mickey />
         <div>
           <h1>MAIN TITLE</h1>
           <p>CONTENTS</p>

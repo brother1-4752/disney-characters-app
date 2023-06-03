@@ -47,7 +47,7 @@ const PosterWrapper = styled.div`
       background-color: rgba(17, 0, 158, 0.35);
       cursor: pointer;
       > .poster__sellecter--label {
-        background-color: #304890;
+        background-color: #ffbc11; //yellow
         color: white;
       }
     }
