@@ -5,6 +5,8 @@ const PosterWrapper = styled.div`
 
   position: relative;
 
+  margin-top: 121px;
+
   .poster__descriptions {
     width: 500px;
     height: 250px;
