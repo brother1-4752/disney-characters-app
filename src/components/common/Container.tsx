@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const MainWrapper = styled.main`
   width: 100%;
+  margin-top: 120px;
   /* height: 500vh; */
 
   display: flex;
