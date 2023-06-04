@@ -35,7 +35,11 @@ export default function CharacterList() {
           data
             .filter((el) => el.imageUrl)
             .map((ch) => (
-              <li className="characterlist__item" key={ch.id}>
+              <Link
+                to={`characters/${ch.id}`}
+                className="characterlist__item"
+                key={ch.id}
+              >
                 <img className="characterlist__item--img" src={ch.imageUrl} />
                 <Link
                   to={`characters/${ch.id}`}
@@ -43,7 +47,7 @@ export default function CharacterList() {
                 >
                   {ch.name}
                 </Link>
-              </li>
+              </Link>
             ))}
       </ul>
     </CharacterListContainer>
