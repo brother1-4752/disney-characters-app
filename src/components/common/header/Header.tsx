@@ -2,7 +2,7 @@ import React from "react";
 import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { paginationState } from "../atoms/atoms";
+import { paginationState } from "../../atoms/atoms";
 
 const HeaderWrapper = styled.header`
   display: flex;
