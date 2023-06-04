@@ -1,5 +1,8 @@
-import { Link } from "react-router-dom";
+import React from "react";
+import { useSetRecoilState } from "recoil";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { paginationState } from "../atoms/atoms";
 
 const HeaderWrapper = styled.header`
   display: flex;
@@ -51,7 +54,31 @@ const NavMenu = styled(Link)`
   }
 `;
 
+const NavPage = styled.div`
+  width: 80px;
+  line-height: 30px;
+
+  font-family: DisneyBold;
+  text-align: center;
+  cursor: pointer;
+
+  color: white;
+  font-size: 1.2em;
+
+  :hover {
+    color: #11009e;
+  }
+`;
+
 export default function Header() {
+  const setPageStartIndex = useSetRecoilState(paginationState);
+
+  const onClickPageIndex = (event: React.MouseEvent) => {
+    const currentPage = parseInt(event.currentTarget.attributes[0].value, 10);
+    const pageStartIndex = 50 * (currentPage - 1) + 1;
+
+    setPageStartIndex(pageStartIndex);
+  };
   return (
     <HeaderWrapper>
       <HeaderTitle>DISNEY WORLD</HeaderTitle>
@@ -59,9 +86,15 @@ export default function Header() {
       <NavOuter>
         <NavInner>
           <NavMenu to="/">HOME</NavMenu>
-          <NavMenu to="/characters/1">PAGE 1</NavMenu>
-          <NavMenu to="/characters/2">PAGE 2</NavMenu>
-          <NavMenu to="/characters/3">PAGE 3</NavMenu>
+          {[1, 2, 3].map((index) => (
+            <NavPage
+              key={index}
+              onClick={onClickPageIndex}
+              data-pageindex={index}
+            >
+              PAGE {index}
+            </NavPage>
+          ))}
         </NavInner>
       </NavOuter>
     </HeaderWrapper>
