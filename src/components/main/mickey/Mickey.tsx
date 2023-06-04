@@ -3,10 +3,14 @@ import { ICharacterSpecificData } from "../../../types/character";
 import { useQuery } from "@tanstack/react-query";
 
 import MickeyContainer from "./Mickey.styled";
+import { Link } from "react-router-dom";
 
 export default function Mickey() {
   //TODO: useFetch라는 커스텀 훅 만들기
-  const { isLoading, error, data } = useQuery<ICharacterSpecificData, Error>({
+  const { isLoading, isError, error, data } = useQuery<
+    ICharacterSpecificData,
+    Error
+  >({
     queryKey: ["FETCH_DISNEY_CHARACTER_LIST"],
     queryFn: fetchMickeyCharacterList,
   });
@@ -15,10 +19,15 @@ export default function Mickey() {
     return <div>"Loading..."</div>;
   }
 
+  if (isError) {
+    return <p>{error?.message}</p>;
+  }
+
   //TODO: useFetch훅 만들때 아래 값들 계산해서 같이 return하기
   const refinedImageUrl = data && data.imageUrl;
   const refinedCharacterName = data && data.name;
   const refinedFilms = data && data.films;
+  const refinedSourceUrl = data && data.sourceUrl;
 
   //TODO: error 처리
 
@@ -26,7 +35,11 @@ export default function Mickey() {
     <MickeyContainer>
       <div className="profile__container">
         <img className="profile__img" src={`${refinedImageUrl}`} />
-        <div className="profile__label">Mickey Mouse</div>
+        <div className="profile__label">
+          <Link target="_blank" to={`${refinedSourceUrl}`}>
+            Mickey Mouse
+          </Link>
+        </div>
       </div>
       <div className="description__container">
         <h1 className="description__name">{refinedCharacterName}</h1>

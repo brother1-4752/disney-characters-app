@@ -37,6 +37,13 @@ const MickeyContainer = styled.div`
       color: white;
       border-radius: 10px;
       cursor: pointer;
+
+      :hover {
+        border: 1px solid #304890;
+        background-color: white;
+        transform: scale(1.2);
+        color: #304890;
+      }
     }
   }
 
