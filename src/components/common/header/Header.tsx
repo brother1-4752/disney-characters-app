@@ -19,7 +19,7 @@ const HeaderWrapper = styled.header`
   animation: slideIn 0.5s ease-in-out forwards;
 
   &.hide {
-    top: -5vh;
+    top: -60px;
   }
 
   @keyframes slideIn {
@@ -34,7 +34,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderTitle = styled.h1`
   width: 100%;
-  background-color: white;
+  background-color: green;
   line-height: 60px;
   text-align: center;
   //TODO: 폰트 type에 따라 size, font-family(Bold|Regular) 구분해서 할당
