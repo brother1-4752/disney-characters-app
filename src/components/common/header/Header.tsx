@@ -34,7 +34,7 @@ const HeaderWrapper = styled.header`
 
 const HeaderTitle = styled.h1`
   width: 100%;
-  background-color: green;
+  background-color: white;
   line-height: 60px;
   text-align: center;
   //TODO: 폰트 type에 따라 size, font-family(Bold|Regular) 구분해서 할당

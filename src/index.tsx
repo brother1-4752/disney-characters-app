@@ -4,10 +4,9 @@ import { RouterProvider } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { RecoilRoot } from "recoil";
 
+import router from "./router.tsx";
 import GlobalStyle from "./styles/Global.ts";
 import "./styles/reset.css";
-
-import router from "./router.tsx";
 
 const queryClient = new QueryClient();
 

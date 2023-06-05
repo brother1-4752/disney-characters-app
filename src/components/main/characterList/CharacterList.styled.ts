@@ -19,11 +19,11 @@ const CharacterListContainer = styled.div`
   }
 
   .characterlist {
-    width: 100%;
+    width: 90%;
 
     display: grid;
     grid-template-columns: repeat(4, minmax(250px, auto));
-    gap: 50px;
+    gap: 5em;
   }
 
   .characterlist__item {
@@ -55,7 +55,6 @@ const CharacterListContainer = styled.div`
       font-size: 18px;
       font-family: DisneyBold;
       text-align: center;
-      /* padding-top: 10px; */
 
       background-color: #ffbc11;
       color: white;
